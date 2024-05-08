@@ -2,6 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import re
 
+import os
+
 elo_over_time_csv_absolute_path = r"D:\Dev\Python\footballElo\csv_files\global football results\elo_arpad_static_global_football_results_k_factor_80.csv"
 
 def load_data(filename):
@@ -22,7 +24,10 @@ def plot_elo_ratings(df, teams):
                 plt.ylabel('ELO Rating')
                 team_name = team.replace("/", " ")
                 team_name = re.sub(r'\\', ' ', team_name)
-                plt.savefig(f'elo_ratingss/{team_name}_elo_ratings.png')
+                #create elo_ratingss folder if not exist
+                if not os.path.exists('elo_ratings'):
+                    os.makedirs('elo_ratings')
+                plt.savefig(f'elo_ratings/{team_name}_elo_ratings.png')
                 plt.close()
         except OSError as E:
             print(E)
