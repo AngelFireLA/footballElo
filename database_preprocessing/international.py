@@ -37,12 +37,12 @@ columns_to_remove = [
 ]
 
 # Example call (commented out to prevent execution)
-remove_columns_from_csv('D:\Dev\Python/footballElo\original_databases\international 1872 to now/all_matches.csv', 'football_results_modified.csv', columns_to_remove)
+remove_columns_from_csv('C:\Dev\Python/footballElo\original_databases\international 1872 to now/all_matches.csv', 'football_results_modified.csv', columns_to_remove)
 
 import pandas as pd
 
 # Load the data
-countries_names_path = r"D:\Dev\Python\footballElo\original_databases\international 1872 to now\countries_names.csv"
+countries_names_path = r"C:\Dev\Python\footballElo\original_databases\international 1872 to now\countries_names.csv"
 all_matches = pd.read_csv('football_results_modified.csv')
 countries_names = pd.read_csv(countries_names_path)
 

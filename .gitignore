@@ -3,3 +3,6 @@ csv_files/domestic football/
 original_databases/
 /elo_ratings
 /graphs
+elo_ratings_stats.csv
+csv_files/global football results/elo_arpad_improved_global_football_50p_120k.csv
+*.csv
